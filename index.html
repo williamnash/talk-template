@@ -15,16 +15,22 @@
 
     <script type="text/javascript">
         var options = {sourceUrl: "talk.md",
-                       highlightStyle: "tomorrow",
+                       highlightStyle: "monokai sublime",
                        ratio: "4:3",
                        slideNumberFormat: "%current% / %total%"};
         var renderMath = function() {
-            renderMathInElement(document.body, {delimiters: [
+            renderMathInElement(document.body, {
+              delimiters: [
                 {left: "$$", right: "$$", display: true},
                 {left: "$", right: "$", display: false},
                 {left: "\\[", right: "\\]", display: true},
-                {left: "\\(", right: "\\)", display: false},
-            ]});
+                {left: "\\(", right: "\\)", display: false},],
+              macros: {
+                  "\\dSig"   : "d_{\\textrm{0}}/\\sigma_{d_{\\textrm{0}}}",
+                  "\\Lxy"    : "L_{\\textrm{xy}}",
+                  "\\LxySig" : "L_{\\textrm{xy}}/\\sigma_{L_{\\textrm{xy}}}",
+              }
+              });
         }
       var slideshow = remark.create(options, renderMath);
     </script>

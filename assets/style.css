@@ -1,13 +1,23 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
 
-body {
-    font-family:  'Lato', 'Avenir Next', 'Avenir', 'Trebuchet MS', 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: #354046; /*#455a64;*/
-    line-height: 1.4;
-    font-size: 11pt;
-    word-wrap: break-word;
+/* UCLA colors from https://brand.ucla.edu/identity/colors ------------------- */
+:root {
+    --darkest-blue-color:  #003B5C;
+    --dark-blue-color:     #005587;
+    --light-blue-color:    #8BB8E8;
+    --lightest-blue-color: #C3D7EE;
+    --dark-gold-color:     #FFB81C;
+    --light-gold-color:    #FFC72C;
 }
 
+body {
+    font-family: 'Hind', 'Avenir Next', 'Avenir', 'Trebuchet MS', 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #354046; /*#455a64;*/
+    line-height: 1.4;
+    font-size: 12pt;
+    word-wrap: break-word;
+}
 
 /* Remark ------------------------------------------------------------------- */
 
@@ -17,14 +27,14 @@ body {
 
 .remark-slide-content {
     font-size: 1.4em;
-    border-top: solid 5px #20707e;
+    border-top: solid 5px var(--dark-blue-color);
 }
 
 .remark-slide-content h1 {
     font-weight: bold;
     font-size: 2.25em;
     margin: 0 0 .5em 0;
-    color: #17525d;
+    color: var(--darkest-blue-color);
 }
 
 .remark-slide-content h2 {
@@ -40,7 +50,7 @@ body {
 }
 
 .remark-slide-number {
-    font-size: 0.5em;
+    font-size: 0.6em;
     bottom: 2em;
 }
 
@@ -105,7 +115,7 @@ strong {
 }
 
 .katex {
-    color: #1a7082;
+    color: #354046;
 }
 
 .black-slide .katex, .black-slide h1, .black-slide a {
@@ -113,7 +123,7 @@ strong {
 }
 
 .remark-code, .remark-inline-code {
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 ul > li, ol > li {
@@ -125,11 +135,9 @@ ul > li > ul > li {
 }
 
 table {
-    border-spacing: 0;
     border: 1px solid #e2e2e2;
-    font-size: .8em;
-    margin: auto;
-    padding: 0;
+    border-spacing: 0;
+    text-align: left;
 }
 
 thead {
@@ -138,18 +146,17 @@ thead {
 }
 
 th {
+    padding: 0px 20px;
+    text-align: left;
     background: #e2e2e2;
-    border: 0;
     font-weight: bold;
-    margin: 0;
-    padding: 7px 0;
-    text-align: center;
 }
 
 tbody {
     background: white;
     font-size: .8em;
     margin: 0;
+    font-family: 'Roboto Mono'
 }
 
 tr {
@@ -193,9 +200,9 @@ td {
 .footnote {
   position: absolute;
   bottom: 2em;
-  font-size: 0.5em;
+  font-size: 0.6em;
   opacity: 0.75;
-  margin-left: -5.5em;
+  margin-left: -4em;
 }
 
 .footnote a{
@@ -230,6 +237,14 @@ td {
     display: block;
     padding: 1em;
 }
+
+.column {
+    float: left;
+    padding: 0.5em;
+}
+
+
+
 
 
 /* Placement ---------------------------------------------------------------- */
@@ -409,14 +424,14 @@ td {
 
 .title-slide:after {
     content: '';
-    background: url("../assets/logo_ulg.png") no-repeat;
-    background-size: 100% 100%;
-    width: 150px;
-    height: 73px;
+    background: url("../assets/logo_ucla.png") no-repeat, url("../assets/logo_cms.gif") no-repeat;
+    background-size: 120px 60px, 60px 60px ;
+    background-position: 0% 100%, 62% 100%;
+    width:  30%;
+    height: 15%;
     position: absolute;
-    bottom: 2em;
-    left: 3.3em;
-    display: inline-block;
+    bottom: 1em;
+    left: 2em;
 }
 
 .title-slide, .section {
@@ -424,7 +439,7 @@ td {
 }
 
 .end-slide {
-    background-color: #20707e;
+    background-color: var(--dark-blue-color);
     color: white;
     vertical-align: middle;
 }
