@@ -18,17 +18,12 @@ class: section
 
 ---
 
-# This is a slide
+# Reminders
 
-Some text goes here.
+Complete before you're done
 
-- or
-- here
-- as 
-- a
-- list
-
-.footnote[This is a footnote.]
+- Adjust the talk name in `index.html`
+- Verify plots are correctly produced in the output pdf
 
 ---
 
@@ -37,6 +32,9 @@ class: middle
 ## This is a sub-title
 
 This slide is centered vertically with `class: middle`.
+- <span style="color:#3F8730;font-weight: bold;">custom color / font</span> 
+
+.footnote[This is a footnote.]
 
 ---
 
@@ -45,7 +43,6 @@ This slide is centered vertically with `class: middle`.
 We can write math with $\KaTeX$ inline, e.g. $\Lxy$, $\dSig$ or as a full line
 
 $$y = mx + b$$
-
 
 
 ---
