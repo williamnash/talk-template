@@ -14,7 +14,10 @@ cd talk-template
 python -m http.server 8001
 ```
 - Edit `talk.md` for making your slides.
-- Use [decktape](https://github.com/astefanutti/decktape) for exporting your slides to PDF.
+- Use [decktape](https://github.com/astefanutti/decktape) for exporting your slides to PDF. Or run
+```
+. make-pdf.sh
+```
 
 ## Markup language
 

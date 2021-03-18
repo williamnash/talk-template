@@ -14,41 +14,65 @@ William Nash<br>
 
 class: section
 
-# Section title
+# Talk section
+
 
 ---
 
-# Reminders
 
-Complete before you're done
+# README
+
+Talk template based off of [remark](https://github.com/gnab/remark). See the [GitHub repo](https://github.com/williamnash/talk-template)
+
+Before completing the talk:
 
 - Adjust the talk name in `index.html`
-- Verify plots are correctly produced in the output pdf
+- Use high resolution (261 dpi) png files
+- Add <span style="color:#3F8730;font-weight: bold;">custom color / font</span>
+
+
+---
+background-image: url(figures/turing.jpg)
+background-size: 25%
+background-position: 50% 90%
+
+# Background Images
+To add custom images with arbitrary placement, use
+
+```
+background-image: url(figures/turing.jpg)
+background-size: 25%
+background-position: 50% 90%
+```
+Multiple images can be placed seperated by commas
 
 ---
 
-class: middle
+# Use in Browser
 
-## This is a sub-title
+`p`: opens presenter mode which shows you a preview of the next slide, a timer, and any slide notes you have written. 
 
-This slide is centered vertically with `class: middle`.
-- <span style="color:#3F8730;font-weight: bold;">custom color / font</span> 
+`c`: will clone the slideshow in a separate tab for your viewers. The cloned slideshow changes slides along with you in presenter mode.
 
 .footnote[This is a footnote.]
 
 ---
-
-# Some maths 
+# Some maths
 
 We can write math with $\KaTeX$ inline, e.g. $\Lxy$, $\dSig$ or as a full line
 
 $$y = mx + b$$
 
+\\[\begin{array}{cc}
+   a & b \\\
+   c & d
+\end{array}\\]
+
+$$\color{#f5c142}{\Lxy}$$
 
 ---
 
-# Some code 
-
+# Some code
 
 ```python
 @requires_authorization(roles=["ADMIN"])
